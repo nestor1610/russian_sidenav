@@ -1,0 +1,14 @@
+<mat-sidenav-container #sidenavContainer >
+  <mat-sidenav mode="side" opened
+    ><app-navigation
+      class="pcoded-navbar"
+      [ngClass]="{
+        'navbar-collapsed': navCollapsed,
+        'theme-horizontal': this.gradientConfig['layout'] === 'horizontal',
+        'mob-open': navCollapsedMob
+      }"
+      (onNavMobCollapse)="navMobClick()"
+    ></app-navigation>
+  </mat-sidenav>
+  <mat-sidenav-content>CONTENT</mat-sidenav-content>
+</mat-sidenav-container>
